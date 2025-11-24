@@ -1,6 +1,7 @@
 # MobileSteelNet 钢铁表面缺陷图像分类项目
 
 ### 代码目标结构
+```
 Code/
 ├── models/                 # 模型定义
 │   ├── __init__.py
@@ -19,6 +20,12 @@ Code/
 ├── config.py              # 配置文件
 ├── requirements.txt       # 依赖包
 └── README.md             # 说明文档
+```
+## 支持的模型
+
+- **ResNet系列**: ResNet18, ResNet34, ResNet50
+- **MobileNet系列**: MobileNetV1, MobileNetV2, MobileNetV3
+- **ShuffleNet系列**: ShuffleNetV1, ShuffleNetV2
 
 
 ### 数据集 NEU-DET
@@ -52,6 +59,82 @@ Data/
     
     
     
+## 使用方法
+
+### 1. 安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. 准备数据
+
+将数据集放在 `Data/` 目录下：
+
+```
+Data/
+├── NEU-DET.zip
+└── FSSD-12.zip
+```
+
+### 3. 训练模型
+
+```python
+# 使用默认配置训练
+python train.py
+
+# 或者修改配置后训练
+from train import SteelDefectTrainer
+from config import get_config
+
+config = get_config(dataset_type='NEU-DET', model_name='ResNet18')
+trainer = SteelDefectTrainer(config)
+trainer.train(train_loader, val_loader, test_loader)
+```
+
+### 4. 配置参数
+
+在 `config.py` 中可以修改以下参数：
+
+- **数据集配置**: 数据集类型、类别数量、图像大小
+- **模型配置**: 模型类型、预训练权重
+- **训练配置**: 学习率、批次大小、训练轮次
+- **数据增强**: 是否使用增强、增强参数
+- **保存配置**: 保存路径、保存间隔
+
+## 示例配置
+
+```python
+config = {
+    'data_dir': '/path/to/data',
+    'dataset_type': 'NEU-DET',
+    'model_name': 'ResNet18',
+    'batch_size': 32,
+    'epochs': 100,
+    'learning_rate': 0.001,
+    'optimizer': 'Adam',
+    'scheduler': 'StepLR'
+}
+```
+
+## 输出结果
+
+训练完成后会生成以下文件：
+
+- `checkpoints/`: 模型检查点
+- `results/`: 评估结果和可视化图表
+  - `metrics.txt`: 详细评估指标
+  - `confusion_matrix.png`: 混淆矩阵
+  - `training_curves.png`: 训练曲线
+  - `class_distribution.png`: 类别分布
+
+## 注意事项
+
+1. 确保有足够的GPU内存进行训练
+2. 根据数据集大小调整批次大小
+3. 可以根据需要调整学习率和训练轮次
+4. 建议使用数据增强来提高模型泛化能力
+
 
 
     
