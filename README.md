@@ -1,6 +1,7 @@
 # MobileSteelNet 钢铁表面缺陷图像分类项目
 
-如果你想使用这个代码，请你向zhongmingliu2004@qq.com进行发送邮件，获取引用。
+如果你想使用这个代码，请你向zhongmingliu2004@qq.com进行发送邮件，获取论文引用。
+If you wish to use this code, please send an email to zhongmingliu2004@qq.com to obtain the paper citation.
 ### 代码目标结构
 ```
 Code/
