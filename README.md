@@ -1,5 +1,27 @@
 # MobileSteelNet 钢铁表面缺陷图像分类项目
 
+## Cite
+```python
+
+@Article{s26031022,
+AUTHOR = {Zou, Xiang and Liu, Zhongming and Xu, Chengjun and Zhang, Jiawei and Li, Zhaoyu},
+TITLE = {MobileSteelNet: A Lightweight Steel Surface Defect Classification Network with Cross-Interactive Efficient Multi-Scale Attention},
+JOURNAL = {Sensors},
+VOLUME = {26},
+YEAR = {2026},
+NUMBER = {3},
+ARTICLE-NUMBER = {1022},
+URL = {https://www.mdpi.com/1424-8220/26/3/1022},
+ISSN = {1424-8220},
+ABSTRACT = {Steel surface defect classification is critical for industrial quality control, yet existing methods struggle to balance accuracy and efficiency for real-time deployment in vision-based sensor systems. This paper presents MobileSteelNet, a lightweight deep learning framework that introduces two novel modules: multi-scale feature fusion (MSFF), for integrating multi-stage features; and Cross-Interactive Efficient Multi-Scale Attention (CIEMA), which unifies inter-channel interaction, parallel multi-scale spatial extraction, and grouped efficient computation. Experiments on the NEU-DET dataset demonstrate that MobileSteelNet achieves 91.36% average accuracy, surpassing ResNet-50 (88.01%) and lightweight networks, including MobileNetV2 (86.08%). Notably, it achieves 93.70% accuracy on Scratch-type defects, representing an 82.12 percentage point improvement over baseline MobileNetV1. With a model size of only 8.2 MB, MobileSteelNet maintains superior performance while meeting lightweight deployment requirements, making it suitable for edge deployment in vision sensor systems for steel manufacturing.},
+DOI = {10.3390/s26031022}
+}
+
+
+
+
+```
+
 如果你想使用这个代码，请你向zhongmingliu2004@qq.com进行发送邮件，获取论文引用。
 If you wish to use this code, please send an email to zhongmingliu2004@qq.com to obtain the paper citation.
 ### 代码目标结构
