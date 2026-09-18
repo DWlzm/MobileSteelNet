@@ -2,6 +2,7 @@
 
 MobileSteelNet is a lightweight deep learning network for steel surface defect classification.
 This repository is the official code implementation of the paper and contains the **MobileSteelNet model only**.
+The Dataset can be found https://faculty.neu.edu.cn/songkechen/zh_CN/zdylm/263270/list/index.htm.
 
 ---
 
