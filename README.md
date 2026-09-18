@@ -1,7 +1,6 @@
 # MobileSteelNet: Steel Surface Defect Classification
 
-MobileSteelNet is a lightweight deep learning network for steel surface defect classification. It achieves **91.36%** average accuracy on the **NEU-DET** dataset with a model size of only **8.2 MB**, making it suitable for real-time deployment in vision-based sensor systems and edge devices.
-
+MobileSteelNet is a lightweight deep learning network for steel surface defect classification.
 This repository is the official code implementation of the paper and contains the **MobileSteelNet model only**.
 
 ---
